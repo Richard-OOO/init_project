@@ -117,6 +117,34 @@ textarea.logline { min-height: 100px; }
 .character-card small { color: #939aa3; font-size: 8px; margin-top: 3px; }
 .review-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 18px; }
 .approved-note { display: flex; align-items: center; gap: 7px; margin-top: 11px; padding: 10px; color: #176b48; background: #eaf7f0; border-radius: 5px; font-size: 10px; }
+.error-note { margin-top: 11px; padding: 10px; color: #9a2e23; background: #fff0ed; border: 1px solid #efc1b9; border-radius: 5px; font-size: 10px; line-height: 1.5; overflow-wrap: anywhere; }
+.shot-summary { margin: 8px 0 14px; padding: 11px; border-left: 3px solid var(--accent); background: var(--soft); }
+.shot-summary strong, .shot-summary span, .shot-summary small { display: block; }
+.shot-summary strong { font-size: 12px; }
+.shot-summary span { margin-top: 5px; color: #505862; font-size: 10px; line-height: 1.5; }
+.shot-summary small { margin-top: 4px; color: #8a929c; font-size: 9px; }
+.media-workbench { margin-top: 19px; padding-top: 17px; border-top: 1px solid var(--line); }
+.media-workbench textarea { min-height: 135px; }
+.media-workbench textarea.prompt-field { min-height: 105px; }
+.shot-tabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; margin-bottom: 13px; }
+.shot-tabs button { min-width: 0; height: 36px; padding: 0 7px; display: flex; align-items: center; justify-content: center; gap: 5px; overflow: hidden; color: #646c76; background: #f5f6f7; border: 1px solid var(--line); border-radius: 5px; font-size: 9px; font-weight: 700; white-space: nowrap; text-overflow: ellipsis; }
+.shot-tabs button span { flex: 0 0 auto; width: 17px; height: 17px; display: grid; place-items: center; color: #7f8790; background: white; border-radius: 50%; }
+.shot-tabs button.active { color: #9f341c; background: #fff1ec; border-color: #e7a28f; }
+.shot-tabs button.active span { color: white; background: var(--accent); }
+.shot-editor { will-change: transform, opacity; }
+.shot-summary.compact { margin-top: 0; }
+.full-button { width: 100%; }
+.asset-preview { display: block; width: 100%; margin: 10px 0 16px; aspect-ratio: 16 / 10; object-fit: cover; border: 1px solid var(--line); border-radius: 5px; background: #e9ecef; }
+.generation-note { margin: 7px 0 0; color: #858c95; font-size: 9px; line-height: 1.5; text-align: center; }
+.mock-video-result { margin-top: 13px; border: 1px solid #b9d9c8; border-radius: 6px; overflow: hidden; background: #f2faf6; }
+.mock-strip { position: relative; display: grid; grid-template-columns: 1fr 1fr; aspect-ratio: 16 / 7; background: #252a2f; }
+.mock-strip img { width: 100%; height: 100%; min-width: 0; object-fit: cover; opacity: .88; }
+.mock-strip svg { position: absolute; inset: 50% auto auto 50%; transform: translate(-50%, -50%); box-sizing: content-box; padding: 9px; color: white; background: rgba(24, 27, 32, .78); border-radius: 50%; }
+.mock-video-result > div:last-child { padding: 10px 11px; }
+.mock-video-result strong, .mock-video-result span { display: block; }
+.mock-video-result strong { color: #176b48; font-size: 10px; }
+.mock-video-result span { margin-top: 3px; color: #5f7468; font-size: 9px; }
+.task-reference { color: #7f8791; font-size: 9px; overflow-wrap: anywhere; }
 .text-button { display: flex; align-items: center; justify-content: center; gap: 5px; width: 100%; border: 0; background: transparent; color: #6b737d; font-size: 10px; margin-top: 13px; }
 
 @keyframes spin { to { transform: rotate(360deg); } }

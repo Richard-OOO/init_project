@@ -19,7 +19,7 @@ export type SwarmTask = {
 
 export type TraceEvent = {
   id: string;
-  type: "TASK_CREATED" | "TASK_STARTED" | "AGENT_MESSAGE" | "STATE_PROPOSED" | "HUMAN_APPROVED";
+  type: "TASK_CREATED" | "TASK_STARTED" | "AGENT_MESSAGE" | "STATE_PROPOSED" | "HUMAN_APPROVED" | "ASSET_GENERATED";
   actor: string;
   message: string;
   timestamp: string;
@@ -28,7 +28,19 @@ export type TraceEvent = {
 export type StoryProposal = {
   logline: string;
   characters: Array<{ name: string; role: string; evidence: string }>;
+  shots: ShotProposal[];
   needsReview: boolean;
+};
+
+export type ShotProposal = {
+  id: string;
+  order: number;
+  title: string;
+  action: string;
+  camera: string;
+  startFramePrompt: string;
+  endFramePrompt: string;
+  videoPrompt: string;
 };
 
 export type StartRunResponse = {
@@ -38,4 +50,14 @@ export type StartRunResponse = {
   tasks: SwarmTask[];
   trace: TraceEvent[];
   proposal: StoryProposal;
+};
+
+export type ImageGenerationResponse = { imageUrl: string; requestId?: string };
+
+export type MockVideoResponse = {
+  id: string;
+  status: "SUCCEEDED";
+  mock: true;
+  generatedAt: string;
+  duration: number;
 };
